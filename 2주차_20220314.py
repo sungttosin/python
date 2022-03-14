@@ -95,6 +95,7 @@ print( (a+b)*c) #예상되는 결과값 : 204
 '''
 
 '''
+#내가 푼거
 a=input() 
 b=input()
 #괄호 안에 숫자를 입력 문자를 쓰고 싶으면 "" 넣으면됨
@@ -104,3 +105,16 @@ print(int(a)*int(b))
 print(int(a)-int(b))
 #int=숫자로 변환 시켜줌
 '''
+
+'''
+a = int(input("첫번째 숫자 입력:"))
+'''
+#위에것을 기입하여 푼것
+
+a=int(input()) 
+b=int(input())
+#괄호 안에 숫자를 입력 문자를 쓰고 싶으면 "" 넣으면됨
+print(a+b)
+print(a*b)
+print(a-b)
+#int=숫자로 변환 시켜줌
