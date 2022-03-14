@@ -109,12 +109,12 @@ print(int(a)-int(b))
 '''
 a = int(input("첫번째 숫자 입력:"))
 '''
+'''
 #위에것을 기입하여 푼것
 
 a=int(input()) 
 b=int(input())
-#괄호 안에 숫자를 입력 문자를 쓰고 싶으면 "" 넣으면됨
 print(a+b)
 print(a*b)
 print(a-b)
-#int=숫자로 변환 시켜줌
+'''
