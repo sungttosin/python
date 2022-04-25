@@ -1,0 +1,63 @@
+#입력으로 받은 자연수의 약수를 출력하는
+#프로그램을 작성해 봅시다.
+#12의 약수 : 1,2,3,4,6,12
+#1~14532의 숫자를 준비해서 상자에 담는다.
+#=> range(1,14533)
+#1부터 숫자를 하나씩 꺼내서
+#for x in range(1,14532):
+'''
+x=1
+for x in range(1,14533):
+    if 14532%x==0:
+        print(f'{x}는 약수 입니다.')
+'''
+'''
+a=int(input("자연수 입력:"));
+for x in range(1,a+1):
+    if a%x==0:
+        print(f'{x}는 약수 입니다.')
+'''
+'''
+a=int(input("첫번째 자연수입력:"));
+b=int(input("첫번째 숫자보다 큰 두번째 자연수입력:"));
+
+for i in range(1,a+1):
+    if a%i==0:
+        if b%i==0:
+            print(i)
+'''
+'''
+a=10
+b=20
+c=0
+for i in range(1,a+1):
+    if a%i==0:
+        if b%i==0:
+            c=i
+print(i)
+'''
+'''
+a=int(input(""));
+b=int(input(""));
+x=0
+for i in range(1,a+1):
+    if a%i==0:
+        if b%i==0:
+            x=i
+print(i)
+'''
+'''
+a=20
+b=30
+c=0
+for x in range(1,a+1):
+    if a%x==0:
+        if b%x==0:
+            print(x) # 공약수를 찾았을 때
+            c=x
+print(c)
+'''
+#문제
+#234532를 455로 나누었을때, 나머지를 구합니다.
+#단, %를 사용하지 않습니다.
+#primeNumber(소수)
