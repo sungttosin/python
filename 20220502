@@ -1,0 +1,62 @@
+'''
+apple = 49
+man = 3
+out = 0
+
+while apple>=man:  #apple가 man보다 큰 동안 까지 반복을 한다.
+    apple = apple - man #apple은 apple - man을 반복
+    out+=1 #이때 위 수식이 반복된 것을 기록
+print(apple) #반복하다 남는 수 출력
+print(out) #반복한 횟수 출력
+'''
+#기말고사 문제가 될수도 있음.
+BOARD=[ [1,2,5],
+        [3,4,6],
+        [5,7,0]]
+#화면에 보드 상태 보여주기
+print(BOARD[0])
+print(BOARD[1])
+print(BOARD[2])
+
+#0의 위치 지정
+r=2
+c=2
+z=0
+#아래 문장을 무한반복
+#while True:
+print("100번 안에 완성 하시오")
+#100번동안 반복하는
+while 100>=z:
+    z+=1
+    key=input('wasd중에 하나 입력')
+#만약 key값이 d와 같다면
+#BOARD[2][2]와 BOARD[2][1]를 서로 바꾸기
+
+    if key == 'a':
+    #왼손, 오른손 = 오른손, 왼손
+        BOARD[r][c-1],BOARD[r][c] = BOARD[r][c],BOARD[r][c-1]
+
+    #변경된 0의 위치
+        r=r
+        c=c-1
+
+    if key == 'w':
+        BOARD[r-1][c],BOARD[r][c] = BOARD[r][c],BOARD[r-1][c]
+        r=r-1
+        c=c
+
+    if key == 'd':
+        BOARD[r][c],BOARD[r][c+1] = BOARD[r][c+1],BOARD[r][c]
+        r=r
+        c=c+1
+
+    if key == 's':
+        BOARD[r+1][c],BOARD[r][c] = BOARD[r][c],BOARD[r+1][c]
+        r=r+1
+        c=c
+    else:
+        print("잘못된 입력입니다")
+        
+    print(BOARD[0])
+    print(BOARD[1])
+    print(BOARD[2])
