@@ -9,7 +9,7 @@ while apple>=man:  #apple가 man보다 큰 동안 까지 반복을 한다.
 print(apple) #반복하다 남는 수 출력
 print(out) #반복한 횟수 출력
 '''
-#기말고사 문제가 될수도 있음.
+#기말고사 문제가 될 수 도있음.
 BOARD=[ [1,2,5],
         [3,4,6],
         [5,7,0]]
@@ -21,7 +21,8 @@ print(BOARD[2])
 #0의 위치 지정
 r=2
 c=2
-z=0
+
+z=0 #~~번 반복하는 카운터 위해 있는거
 #아래 문장을 무한반복
 #while True:
 print("100번 안에 완성 하시오")
@@ -32,7 +33,7 @@ while 100>=z:
 #만약 key값이 d와 같다면
 #BOARD[2][2]와 BOARD[2][1]를 서로 바꾸기
 
-    if key == 'a':
+    if key == 'a' and c>0:
     #왼손, 오른손 = 오른손, 왼손
         BOARD[r][c-1],BOARD[r][c] = BOARD[r][c],BOARD[r][c-1]
 
@@ -40,23 +41,25 @@ while 100>=z:
         r=r
         c=c-1
 
-    if key == 'w':
+    elif key == 'w' and r>0:
         BOARD[r-1][c],BOARD[r][c] = BOARD[r][c],BOARD[r-1][c]
         r=r-1
         c=c
 
-    if key == 'd':
+    elif key == 'd'and c<2:
         BOARD[r][c],BOARD[r][c+1] = BOARD[r][c+1],BOARD[r][c]
         r=r
         c=c+1
+        
 
-    if key == 's':
+    elif key == 's' and r<2:
         BOARD[r+1][c],BOARD[r][c] = BOARD[r][c],BOARD[r+1][c]
         r=r+1
         c=c
     else:
-        print("잘못된 입력입니다")
+        print("잘못입력하였습니다.")
         
     print(BOARD[0])
     print(BOARD[1])
     print(BOARD[2])
+
