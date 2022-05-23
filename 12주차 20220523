@@ -73,10 +73,8 @@ while True:
     n = random.randint(0,50);
     a = n+1
     b = n+2
-    c = n+3
-    d = n+4
-    z = n+a+b+c+d
+    z = n+a+b
 
     if z == 81:
-        print(n,a,b,c,'=81 가능')
+        print(n,a,b,'=81 가능')
         break
