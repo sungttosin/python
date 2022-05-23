@@ -63,3 +63,20 @@ while True: #무한 반복
         else:
             print('비김')
     print('사용자',a,'승',c,'패','컴퓨터',b,'승',d,'패') # 사용자 컴퓨터 이긴 횟수
+
+
+# 연속된 3개의 정수를 합해 81이 될수 있을까?
+
+import random
+
+while True:
+    n = random.randint(0,50);
+    a = n+1
+    b = n+2
+    c = n+3
+    d = n+4
+    z = n+a+b+c+d
+
+    if z == 81:
+        print(n,a,b,c,'=81 가능')
+        break
