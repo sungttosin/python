@@ -1,0 +1,55 @@
+import random
+
+a=0
+b=0
+
+while True:
+    if a == 4 or b == 4:
+        if a == 4:
+            print('사용자 승리')
+        else:
+            print('컴퓨터 승리')
+        break
+
+    n= random.randint(0,2);
+    if n == 0:
+        y = '주먹'
+    elif n == 1:
+        y = '가위'
+    else:
+        y = '보'
+
+    m = input('가위 바위 보 중에 입력하세요:')
+    print('사용자',m,'컴퓨터',y)
+
+    if y == '주먹':
+        if m == '주먹':
+            print('비김')
+
+        elif m == '가위':
+            print('졌음')
+            b+=1
+        else:
+            print('이김')
+            a+=1
+
+    if y == '가위':
+        if m == '주먹':
+            print('이김')
+            a+=1
+        elif m == '가위':
+            print('비김')
+        else:
+            print('졌음')
+            b+=1
+
+    if y == '보':
+        if m == '주먹':
+            print('졌음')
+            b+=1
+        elif m == '가위':
+            print('이김')
+            a+=1
+        else:
+            print('비김')
+    print('사용자',a,'컴퓨터',b)
