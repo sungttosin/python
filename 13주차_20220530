@@ -19,6 +19,37 @@ def 넓이에맞는사각형출력(a,b):
 
 r=int(input('넓이를 입력해주세요:'))
 
+#1~r까지 i에 값을 할당하며 반복
 for i in range(1,r+1):
-    if r%i==0: #약수찾기
+    if r%i==0 and i*i <= r: #약수찾기
         넓이에맞는사각형출력(i,r//i)
+
+==============================================
+
+#위에 식 간략하게 하고, 소수,합성수 나오게 
+def 세로(n):
+    for i in range(n):
+        print('@', end='')
+    print()
+    
+
+def 가로(a,b):
+    for i in range(a):
+        세로(b)
+    print();
+c=0
+r = int(input('크기입력:'))
+
+for i in range(1,r+1):
+    if r%i==0 and i*i <=r:
+        가로(i,r//i)
+        c+=1
+if c>=2:
+    print('합성수 입니다')
+else:
+    print('소수 입니다')
+    
+    
+  =================================
+  
+  위에 프로그램을 while 으로 변경하여 할 것 (기말고사 시험 문제)
