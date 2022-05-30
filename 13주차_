@@ -1,7 +1,0 @@
-#문제 넓이에 따른 가능한 모양출력
-
-a= int(input('세로크기'))
-b= int(input('가로크기'))
-
-for _ in range(a):
-    print('@'*b)
